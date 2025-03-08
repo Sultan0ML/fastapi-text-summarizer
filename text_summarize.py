@@ -59,7 +59,7 @@ async def summarize_text(request: SummarizationRequest):
         summary = summarizer(formatted_text, max_length=250, min_length=50, do_sample=False)
         summary_text = summary[0]["summary_text"]
 
-        # ✅ Convert response to JSON format
+        # Convert response to JSON format
         return JSONResponse(content={"summary": summary_text}, media_type="application/json")
 
     except Exception as e:

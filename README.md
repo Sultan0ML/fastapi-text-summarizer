@@ -122,6 +122,25 @@ streamlit run app.py
 ├── requirements.txt    # Dependencies
 └── README.md           # Documentation
 ```
+## Performance & Limitations
+
+## Performance
+
+Inference Latency: The summarization model (sshleifer/distilbart-cnn-12-6) has an average response time of 1-2 seconds, depending on input length.
+
+Computational Requirements: Requires a machine with at least 4GB RAM and a CPU/GPU for smooth processing.
+
+Scalability: Can be deployed on cloud platforms like AWS/GCP using containerization.
+
+## Limitations
+
+High Latency for Large Inputs: Longer texts may experience increased processing time.
+
+Limited to English Texts: The current model is trained for English text summarization only.
+
+No Context Awareness: The summarization is extractive and does not deeply understand context beyond sentence structures.
+
+Memory Consumption: Running multiple concurrent requests may cause increased RAM usage, especially without GPU acceleration.
 
 ## Contributing
 

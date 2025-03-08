@@ -1,0 +1,25 @@
+nohup: ignoring input
+INFO:     Started server process [7889]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     127.0.0.1:55802 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55802 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55808 - "POST /summarize HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:57900 - "POST /summarize HTTP/1.1" 422 Unprocessable Entity
+Your max_length is set to 250, but your input_length is only 181. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=90)
+INFO:     127.0.0.1:50128 - "POST /summarize HTTP/1.1" 200 OK
+INFO:text_summarize:Received raw request: {'query': 'hello i am sultan'}
+INFO:     127.0.0.1:37702 - "POST /query HTTP/1.1" 200 OK
+Your max_length is set to 250, but your input_length is only 181. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=90)
+INFO:     127.0.0.1:37718 - "POST /summarize HTTP/1.1" 200 OK
+INFO:text_summarize:Received raw request: {'query': ''}
+INFO:     127.0.0.1:60012 - "POST /query HTTP/1.1" 200 OK
+INFO:text_summarize:Received raw request: {'query': 'hello how are you'}
+INFO:     127.0.0.1:42712 - "POST /query HTTP/1.1" 200 OK
+INFO:text_summarize:Received raw request: {'query': 'hello how are you'}
+INFO:     127.0.0.1:56142 - "POST /query HTTP/1.1" 200 OK
+INFO:text_summarize:Received raw request: {'query': 'hello how are you'}
+INFO:     127.0.0.1:33050 - "POST /query HTTP/1.1" 200 OK
+Your max_length is set to 250, but your input_length is only 181. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=90)
+INFO:     127.0.0.1:36818 - "POST /summarize HTTP/1.1" 200 OK

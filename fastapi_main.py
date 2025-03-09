@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+from fastapi.responses import JSONResponse
 from transformers import pipeline
 import logging
 import re
@@ -24,21 +25,19 @@ class QueryRequest(BaseModel):
 
 class SummarizationRequest(BaseModel):
     text: str
-
+# health chack
 @app.get("/", summary="Health Check", response_model=dict)
 async def root():
     """Check if the API is running."""
     return {"message": "FastAPI AI Microservice is running."}
-
+# Process User Query
 @app.post("/query", summary="Process User Query", response_model=dict)
 async def process_query(request: QueryRequest):
     """Receives user query and responds with an acknowledgment."""
     logger.info(f"Received raw request: {request.dict()}")  # Convert request model to dict
     return {"response": f"You asked: {request.query}"}
 
-
-from fastapi.responses import JSONResponse
-
+# Summarize Text
 @app.post("/summarize", summary="Summarize Text", response_model=dict)
 async def summarize_text(request: SummarizationRequest):
     """Summarizes the given text using an AI model."""

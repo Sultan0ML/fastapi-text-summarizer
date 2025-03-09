@@ -23,3 +23,7 @@ INFO:text_summarize:Received raw request: {'query': 'hello how are you'}
 INFO:     127.0.0.1:33050 - "POST /query HTTP/1.1" 200 OK
 Your max_length is set to 250, but your input_length is only 181. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=90)
 INFO:     127.0.0.1:36818 - "POST /summarize HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7889]

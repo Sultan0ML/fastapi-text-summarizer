@@ -38,7 +38,7 @@ This repository contains a FastAPI-based AI microservice that provides text quer
 Start the FastAPI service using Uvicorn:
 
 ```sh
-nohup uvicorn text_summarize:app --host 0.0.0.0 --port 8080 > output.log 2>&1 &
+nohup uvicorn fastapi_main:app --host 0.0.0.0 --port 8080 > output.log 2>&1 &
 ```
 
 This command runs the server in the background, logging output to `output.log`.
@@ -115,7 +115,7 @@ streamlit run app.py
 
 ```
 📂 project_root
-├── text_summarize.py  # FastAPI server
+├── fastapi_main.py  # FastAPI server
 ├── Query_endpoint.py   # Query request script
 ├── summary_endpoint.py # Summarization request script
 ├── app.py    # Streamlit frontend
